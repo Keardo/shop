@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container_12">
+  <div class="grid_12">
+    <ul>
+      <li><%= link_to "Главная", root_path %></li>
+      <li><%= link_to "Корзина", pages_cart_path %></li>
+      <li><%= link_to "Профиль", edit_user_registration_path %></li>
+    </ul>
+  </div>
+
+  <div class="grid_12">
+    <%= yield %>
+  </div>
+
+  <div class="grid_12">
+      Footer
+  </div>
+</div>
+</body>
+</html>
